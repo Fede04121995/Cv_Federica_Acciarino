@@ -1,0 +1,13 @@
+lista_primi = []
+
+nome = input("Dimmi come ti chiami!")
+print("Grazie,", nome)
+
+while true: 
+    def decoratore_primo_o_no():
+        def wrapper(*args, **kwargs):
+            print("Prima")
+            risultato =  funzione(*args, **kwargs)
+            print("Dopo")        
+            return risultato
+        return wrapper

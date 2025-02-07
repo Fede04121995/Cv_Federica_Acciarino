@@ -1,0 +1,34 @@
+while True:
+    scelta = input("Vuoi entrare nel programma? Si/No?")
+    if(scelta == "si"):
+            print("Sei appena entrato!")
+    else:
+        print("Non sei entrato.")
+        
+    numero = int(input("Inserisci un numero positivo"))        
+    
+    if(numero <= 0):
+            numero = int(input("Inserisci un numero positivo"))
+    else:
+            print("Ilnumero è positivo")
+            break
+        
+
+    
+    
+    n= int(input("ora inserisci un numero"))
+
+    for num in range(1, n+1):
+        somma = num+n
+        if(num %2 == 0):
+            print(somma)
+            
+    
+    n2= int(input("inserisci un numero"))
+
+    for num2 in range(1, n+1):
+        if(num2 %2 != 0):
+            print(num2)        
+            
+        
+

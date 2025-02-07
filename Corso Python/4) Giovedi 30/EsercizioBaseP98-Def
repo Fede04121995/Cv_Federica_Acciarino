@@ -1,0 +1,27 @@
+import random
+def gioco():
+    num = [*range(1, 20+1)]
+
+    for n in num:
+        n = int(input("scegli un numero"))
+        numero_casuale = random.randint(1, 20)
+        print(numero_casuale)
+        if(n == numero_casuale):
+            print("Hai indovinato")
+            if(n >= 1 and n <= 10):
+                print("il num è basso")
+            else:
+                print("è alto")
+            
+            
+        else:
+            print("non hai indovinato")
+
+while True:
+    gioco()            
+    scelta = input("Vuoi rigiocare? si/no") 
+    if(scelta == "si"):
+        continue
+    else:
+        break      
+       

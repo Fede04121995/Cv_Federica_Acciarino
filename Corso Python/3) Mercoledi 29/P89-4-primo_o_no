@@ -1,0 +1,36 @@
+@decoratore_primo_o_no
+def primo_o_no(n):
+    if n <= 1:
+        print(f"{n} non è primo")
+    elif n == 2 or n == 3:
+        print(f"{n} è un numero primo")
+    elif n % 2 == 0:
+        print(f"{n} non è primo")
+    else:
+        primo = True
+        for i in range(3, (n // 2) + 1, 2):  # Controlliamo solo numeri dispari fino a √n
+            if n % i == 0:
+                primo = False  # Se trova un divisore, non è primo
+                break  # Uscire subito dal ciclo
+        if primo:
+            print(f"{n} è un numero primo!")
+        else:
+            print(f"{n} non è un numero primo.")
+
+# Funzione principale
+def main():
+
+    print(f"Benvenuto!")
+
+    while True:
+        numero = int(input("Inserisci un numero (oppure -1 per uscire): "))  # Chiediamo un numero
+
+        if numero == -1:
+            print("Sei uscito dal programma")
+            break  # Se l'utente inserisce -1, esci dal ciclo
+
+        # Chiamata alla funzione primo_o_no con il numero passato come argomento
+        primo_o_no(numero)
+
+# Eseguiamo il programma
+main()

@@ -1,0 +1,16 @@
+#utilizzo di while e range    
+
+controllore = True
+
+while controllore:
+    n = int(input("Inserisci un numero"))
+    if n < 0:
+        print("devi inserire un numero posiivo")
+        scelta = input("ferma il programma")
+        if scelta == "si":
+            break
+        else:
+            continue
+        
+    for i in range(n, 1, -1):
+        print(i)
